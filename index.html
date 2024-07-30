@@ -1,58 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <title>Portfolio Joanah</title>
     <!-- normalize -->
     <link href="https://cdjn.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Licorice&display=swap" rel="stylesheet">
     <!-- stylesheet -->
     <link rel="stylesheet" href="mainstyle.css">
 </head>
 
 <body>
     <header>
-        <h1>Joanah's Design Portfolio</h1>
+        <img src="images/headerBGEllipse.png" alt="background ellipse">
+        <h1>JOANAH MARTIN</h1>
+        <p>Designer and Artist</p>
     </header>
 
     <!-- main nav -->
     <nav>
         <ul>
-            <li><a href="index.html"><img src="" alt="">home</a></li>  <!-- make this into a home icon -->
-            <li><a href="subpages/projectsNavigation.html">projects</a></li>
-            <li><a href="subpages/aboutMe.html">about me</a></li>
-            <li><a href="subpages/contactMe.html">contact me</a></li>
+            <li class="homeIcon"><a href="index.html"><img src="images/homeICON.png" alt="home button"></a></li>
+            <li class="projectIcon"><a href="subpages/projectsNavigation.html"><img src="images/portfolioICON.png" alt="portfolio icon"></a></li>
+            <li class="aboutIcon"><a href="#aboutScroll"><img src="images/aboutICON.png" alt="about me icon"></a></li>
+            <li class="contactIcon"><a href="subpages/contactMe.html"><img src="images/contactICON.png" alt="contact me icon"></a></li>
         </ul>
     </nav>
 
     <!-- project showcase -->
-    <section>
-        <div class="projectBox">   
-            <h2>Project 1</h2>
-            <p>Project description</p>
+    <main id="projectShowcase">
+        <div class="headerDesign">
+            <h2>Portfolio</h2>
+            <p class="textDecor">projects</p>
         </div>
-        <div class="projectBox">   
-            <h2>Project 2</h2>
-            <p>Project description</p>
-        </div>
-        <div class="projectBox">   
-            <h2>Project 3</h2>
-            <p>Project description</p>
-        </div>
-    </section>
+        <section>
+            <article class="projectBox">   
+                <a href="subpages/projects/project1.html"><h3>OutLoud!</h3></a>
+                <div>
+                    <p class="mobileStyling">Website case study</p>
+                    <p class="desktopStyling">This case study focuses on creating a website for "Out Loud!" to promote artists and their artworks, aiming to engage and politically awaken youth of color in New York by encouraging them to attend gallery openings and events.</p>
+                    <img src="images/outloudIMG.png" alt="outloud website screenshot">
+                </div>
+            </article>
+
+            <article class="projectBox">   
+                <a href="subpages/projects/project2.html"><h3>Persona</h3></a>
+                <div>
+                    <p class="mobile">Website fan project</p>
+                    <p class="desktopStyling">This site is a personal project aimed at honing my web development and design skills, combining CSS techniques, UX/UI principles, and accessibility features to create an engaging and inclusive experience for all Persona fans.</p>
+                    <img src="images/personaIMG.png" alt="persona fan website">
+                </div>
+            </article>
+
+            <article class="projectBox">   
+                <a href="subpages/projects/project3.html"><h3>FoodFresh</h3></a>
+                <div>
+                    <p class="mobile">App case study</p>
+                    <p class="desktopStyling">This is a case study for an app addressing food insecurity for low-income, full-time student parents by simplifying SNAP application processes, tracking eligibility and status, providing geolocation for nearby food banks, and offering healthy food deals and coupons.</p>
+                    <img src="images/foodfreshIMG.png" alt="food fresh app">
+                </div>
+            </article>
+        </section>
+    </main>
+
     <!-- About Me-general -->
-    <section>
-        <h2> About Me</h2>
-        <div>
-            <img>
+    <aside id="aboutMe">
+        <div class="headerDesign">
+            <h2 id="aboutScroll"> About Me</h2>
+            <p>profile</p>
         </div>
-        <p>this is the words within the about me</p>
-    </section>
+
+        <div class="aboutImg">
+            <img src="images/me.jpg" alt="an image of me">
+        </div>
+        <p>Hi, I'm Joanah Martin and I'm a Design and CDM double major and I am interested in UI/UX design and game design. Other than the basics of Adobe programs, I have an understanding of Figma and learning how to use After Effects. I have some experience with writing code in HTML and CSS, as seen with this website that I coded and designed myself. Nonetheless, I am excited to learn and understand how web design works and add that to my belt.</p>
+    </aside>
     
     <!-- footer -->
     <footer>
-        <h3>footer</h3>
-        <p>this is in the footer grah</p>
+        <h3>Contact</h3>
+        <p>designed by joanah martin</p>
     </footer>
 </body>
 </html>

@@ -1,0 +1,35 @@
+@media (max-width: 768px) {
+    /******* GENERAL STYLING ********/
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    /******* NAVIGATION ********/
+    nav ul {
+        display: flex;
+        background-color: #03346E;
+        justify-content: space-between;
+        list-style-type: none;
+        align-items: center;
+        border-radius: 7%;
+        padding-left: 10px;
+        padding-right: 10px;
+        position: fixed;
+        top: 89%;
+        width: 97%;
+    }
+
+    nav ul a:visited, nav ul a {
+        color: #E2E2B6;
+    }
+
+    nav ul li {
+        padding: 11px 15px 5px 15px;
+    }
+
+    nav ul li a img {
+        height: 50%;
+    }
+
+}
