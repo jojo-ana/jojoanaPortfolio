@@ -1,23 +1,87 @@
+/******* GENERAL STYLING ********/
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #E8EFF4;
+}
+
+h1, h2 {
+    font-family: "Libre Caslon Display", serif;
+    font-weight: 100;
+    margin: 0px;
+    font-size: 62px;
+    color: #021526;
+}
+
+section article.projectBox a:visited, section article.projectBox a, h3 {
+    font-family: "Outfit", sans-serif;
+    color: #021526;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+p.mobileStyling {
+    display: none;
+}
+
+p {
+    font-family: "Outfit", sans-serif;
+    color: #03346E;
+    margin: 0px;
+}
+
+p.textDecor {
+    font-family: "Licorice", cursive;
+    color: #6EACDA;
+    font-size: 53px;
+}
+
+/******* NAVIGATION ********/
+nav ul {
+    display: flex;
+    background-color: #03346E;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    border-radius: 26px;
+    padding-left: 0px;
+    padding-right: 0px;
+    position: fixed;
+    top: 26%;
+    height: 44%;
+    flex-direction: column;
+    right: 0%;
+}
+nav ul li {
+    padding: 25px 5px 25px 5px;
+}
+
+/******* HEADER ********/
+header {
+    background-image: url("../../images/headerBackground.png");
+}
+
 @media (max-width: 768px) {
-    /******* GENERAL STYLING ********/
-    body {
-        margin: 0px;
-        padding: 0px;
+    p.desktopStyling{
+        display: none;
     }
-    
+
     /******* NAVIGATION ********/
     nav ul {
         display: flex;
         background-color: #03346E;
-        justify-content: space-between;
         list-style-type: none;
-        align-items: center;
+        align-items: baseline;
         border-radius: 7%;
         padding-left: 10px;
         padding-right: 10px;
         position: fixed;
         top: 89%;
         width: 97%;
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
 
     nav ul a:visited, nav ul a {
