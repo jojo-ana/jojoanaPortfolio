@@ -40,29 +40,29 @@
         </div>
         <section>
             <article class="projectBox">   
-                <a href="subpages/projects/project1.html"><h3>OutLoud!</h3></a>
+                <a href="subpages/projects/project1.html" class="projectHoverLink project1"><h3 class="projectGrid1">OutLoud!</h3></a>
                 <div>
-                    <p class="mobileStyling">Website case study</p>
-                    <p class="desktopStyling">This case study focuses on creating a website for "Out Loud!" to promote artists and their artworks, aiming to engage and politically awaken youth of color in New York by encouraging them to attend gallery openings and events.</p>
-                    <img src="images/outloudIMG.png" alt="outloud website screenshot">
+                    <p class="mobileStyling" class="projectGrid2">Website case study</p>
+                    <p class="desktopStyling" class="projectGrid2">This case study focuses on creating a website for "Out Loud!" to promote artists and their artworks, aiming to engage and politically awaken youth of color in New York by encouraging them to attend gallery openings and events.</p>
+                    <img src="images/outloudIMG.png" alt="outloud website screenshot" class="projectGrid3">
                 </div>
             </article>
 
             <article class="projectBox">   
-                <a href="subpages/projects/project2.html"><h3>Persona</h3></a>
+                <a href="subpages/projects/project2.html" class="projectHoverLink project2"><h3 class="projectGrid1">Persona</h3></a>
                 <div>
-                    <p class="mobileStyling">Website fan project</p>
-                    <p class="desktopStyling">This site is a personal project aimed at honing my web development and design skills, combining CSS techniques, UX/UI principles, and accessibility features to create an engaging and inclusive experience for all Persona fans.</p>
-                    <img src="images/personaIMG.png" alt="persona fan website">
+                    <p class="mobileStyling" class="projectGrid2">Website fan project</p>
+                    <p class="desktopStyling" class="projectGrid2">This site is a personal project aimed at honing my web development and design skills, combining CSS techniques, UX/UI principles, and accessibility features to create an engaging and inclusive experience for all Persona fans.</p>
+                    <img src="images/personaIMG.png" alt="persona fan website" class="projectGrid3">
                 </div>
             </article>
 
             <article class="projectBox">   
-                <a href="subpages/projects/project3.html"><h3>FoodFresh</h3></a>
+                <a href="subpages/projects/project3.html" class="projectHoverLink project3"><h3 class="projectGrid1">FoodFresh</h3></a>
                 <div>
-                    <p class="mobileStyling">App case study</p>
-                    <p class="desktopStyling">This is a case study for an app addressing food insecurity for low-income, full-time student parents by simplifying SNAP application processes, tracking eligibility and status, providing geolocation for nearby food banks, and offering healthy food deals and coupons.</p>
-                    <img src="images/foodfreshIMG.png" alt="food fresh app">
+                    <p class="mobileStyling" class="projectGrid2">App case study</p>
+                    <p class="desktopStyling" class="projectGrid2">This is a case study for an app addressing food insecurity for low-income, full-time student parents by simplifying SNAP application processes, tracking eligibility and status, providing geolocation for nearby food banks, and offering healthy food deals and coupons.</p>
+                    <img src="images/foodfreshIMG.png" alt="food fresh app" class="projectGrid3">
                 </div>
             </article>
         </section>
@@ -86,7 +86,21 @@
     <!-- footer -->
     <footer>
         <h3>Contact</h3>
+        <div class="contactFormContainer">
+            <form id="contactForm" action="https://formspree.io/f/mblroylk" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
         <p>designed by joanah martin</p>
     </footer>
+
+    <!-- Link to the JavaScript file -->
+    <script src="scripts.js"></script>
 </body>
 </html>

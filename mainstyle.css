@@ -21,6 +21,8 @@ section article.projectBox a:visited, section article.projectBox a, h3 {
     font-size: 40px;
     font-weight: 400;
     margin: 0px;
+    height: 57px;
+    padding: 0px 5px;
 }
 
 p.mobileStyling {
@@ -92,6 +94,7 @@ nav ul {
 nav ul li {
     padding: 25px 5px 25px 5px;
 }
+
 nav ul li a {
     height: 54px;
     display: block;
@@ -142,6 +145,83 @@ header img {
 /******* PROJECT SHOWCASE ********/
 #projectShowcase {
     overflow-x: hidden;
+    position: relative;
+}
+
+#projectShowcase p {
+    text-align: right;
+}
+
+#projectShowcase section article.projectBox {
+    display: grid;
+    grid-template-areas:
+        "projectGrid1 projectGrid2"
+        "projectGrid3 projectGrid3";
+    grid-gap: 10px;
+    padding: 26px 25px;
+    margin-left: 21%;
+    height: 193px;
+    width: 100%;
+    overflow: hidden;
+    background:#e8eff47d;
+    margin-bottom: 3%;
+    border-radius: 50px;
+    border-top: 3px solid #021526;
+    border-left: 4px solid #021526;
+    border-bottom: none;
+    border-right: none;
+}
+
+#projectShowcase section article.projectBox div {
+    padding-right: 10%;
+}
+
+#projectShowcase p.desktopStyling {
+    width: 71%;
+    line-height: 40px;
+}
+
+#projectShowcase article.projectBox div img.projectGrid3 {
+    opacity: 78%;
+    border-radius: 10px;
+}
+
+.projectHoverLink {
+    position: relative; 
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    overflow: hidden;
+  }
+
+#projectShowcase .projectHoverLink::before {
+    content: "";
+    position: absolute;
+    top: -15%;
+    left: -11%;
+    width: 224px;
+    height: 70px;
+    background-color: #6eacda;
+    transform: translate(-30%, -30%) scale(0); 
+    transition: transform 0.3s ease; 
+    z-index: -1;
+  }
+
+#projectShowcase .projectHoverLink:hover::before {
+    transform: translate(0%, 0%) scale(1); 
+}
+
+#projectShowcase .project1::before {
+    clip-path: polygon(12% 21%, 92% 14%, 86% 86%, 10% 90%);
+}
+
+#projectShowcase .project2::before {
+    clip-path: polygon(7% 0%, 80% 10%, 78% 81%, 17% 93%);
+}
+
+#projectShowcase .project3::before {
+    clip-path: polygon(3% 14%, 94% 20%, 103% 94%, 17% 93%);
 }
 
 /******* ABOUT ME ********/
@@ -184,7 +264,60 @@ footer p {
     color: #458bdd;
 }
 
+div.contactFormContainer {
+    padding-left: 28px;
+}
+
+label {
+    display: block;
+    margin: 7px 0 5px;
+    font-family: 'Outfit';
+    color: antiquewhite;
+}
+
+input, textarea {
+    width: 22%;
+    padding: 6px;
+    margin-bottom: -1px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 4px 7px rgb(15 17 35 / 61%);
+}
+
+#email {
+    margin-bottom: 17px;
+}
+
+button {
+    width: 15%;
+    margin-left: 3%;
+    padding: 10px;
+    background-color: #4083d1;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
 /* Mobile styles */
+@media (max-width: 1000px){
+    #projectShowcase section article.projectBox {
+        width: 80%;
+    }
+
+    #projectShowcase p.desktopStyling {
+        width: 47%;
+        line-height: 28px;
+    }
+    section article.projectBox a {
+        width: 192px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     /******* GENERAL STYLING ********/
     body {
@@ -279,6 +412,26 @@ footer p {
 
     #projectShowcase p.mobileStyling {
         display: block;
+        text-align: left;
+        padding-bottom: 13px;
+    }
+
+    #projectShowcase section article.projectBox {
+        display: grid;
+        grid-template-areas: 
+            "projectGrid1"
+            "projectGrid2"
+            "projectGrid3";
+        grid-gap: 0px;
+        padding: 3px 25px;
+        width: 70%;
+        height: 102px;
+    }
+
+    #projectShowcase section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 
     /******* ABOUT ME ********/
