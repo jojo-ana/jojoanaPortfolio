@@ -83,7 +83,7 @@ nav ul {
     padding-right: 0px;
     position: fixed;
     top: 26%;
-    height: 44%;
+    height: auto;
     flex-direction: column;
     right: 0%;
     z-index: 10;
@@ -162,6 +162,13 @@ aside img {
     margin-left: auto;
     border-radius: 14px;
     margin-right: auto;
+}
+
+aside div.aboutBody{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0px 14%;
 }
 
 /******* FOOTER ********/
@@ -262,8 +269,8 @@ footer p {
         padding: 11px 15px 5px 15px;
     }
 
-    nav ul li a img {
-        height: 50%;
+    nav ul li a {
+        height: 95px;
     }
 
     /******* PROJECT SHOWCASE ********/
@@ -279,6 +286,11 @@ footer p {
     aside p.aboutText {
         padding: 10%;
         line-height: 30px;
+    }
+
+    aside div.aboutBody {
+        align-items: center;
+        flex-direction: column;
     }
 
     /******* FOOTER ********/
