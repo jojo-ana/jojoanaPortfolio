@@ -3,6 +3,7 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: #E8EFF4;
+    overflow-x: hidden;
 }
 
 h1, h2 {
@@ -30,12 +31,44 @@ p {
     font-family: "Outfit", sans-serif;
     color: #03346E;
     margin: 0px;
+    font-size: 16px;
 }
 
 p.textDecor {
     font-family: "Licorice", cursive;
     color: #6EACDA;
     font-size: 53px;
+}
+
+div.headerDesign {
+    height: 100px;
+    justify-content: center;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+div.headerDesign h2 {
+    border-style: solid;
+    border-color: #6EACDA;
+    padding: 1% 5%;
+}
+
+div.headerDesign p.textDecor{
+    padding-top: 1.5%;
+    position: absolute;
+    z-index: -1;
+    color: transparent;
+    text-shadow: 0 0 3px #6eacdaa1;
+    letter-spacing: 25px;
+}
+
+/******* BACKGROUND ELEMENTS ********/
+#backgroundRects {
+    position: fixed;
+    z-index: -2;
+    overflow: hidden;
+    transform: translate(-200px, -550px);
 }
 
 /******* NAVIGATION ********/
@@ -61,22 +94,97 @@ nav ul li {
 /******* HEADER ********/
 header {
     background-image: url("images/headerBackground.png");
+    height: 425px;
+    margin-top: 3%;
+}
+
+header h1 {
+    padding-top: 295px;
+    padding-left: 7%;
+}
+
+header p {
+    font-size: 28px;
+    padding-left: 46%;
+}
+
+header h1, header p {
+    position: relative;
+    z-index: 1;
+}
+
+header p::before {
+    content: "";
+    display: block;
+    width: 44%;
+    background: #11588C;
+    left: 0%;
+    top: 46%;
+    position: absolute;
+    padding-top: 4px;
+}
+
+header img {
+    display: block;
+    position: absolute;
+    width: 32%;
+    opacity: 0.5;
+    transform: translate(510px, 10px);
+}
+
+/******* PROJECT SHOWCASE ********/
+#projectShowcase {
+    overflow-x: hidden;
+}
+
+/******* ABOUT ME ********/
+aside p.aboutText {
+    padding: 5%;
+    padding-right: 10%;
+    font-size: 18px;
+    line-height: 38px;
+}
+
+aside img {
+    width: 200px;
+    height: 200px;
+    padding: 25px 15px 79px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+    background: whitesmoke;
+    display: block;
+    margin-left: auto;
+    border-radius: 14px;
+    margin-right: auto;
 }
 
 /* Mobile styles */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+    /******* GENERAL STYLING ********/
+    body {
+        overflow-x: hidden;
+    }
     p.desktopStyling{
         display: none;
     }
+
+    /******* BACKGROUND ELEMENTS ********/
+    #backgroundRects {
+        width: 990px;
+    }
+
     /******* HEADER ********/
+    header {
+        height: auto;
+        overflow-x: hidden;
+    }
     header img {
         display: block;
         position: relative;
-        /* z-index: 0; */
-        width: 57%;
+        width: 60%;
         opacity: 0.5;
-        transform: translateX(190px) translateY(-90px);
+        transform: translateX(190px);
     }
+
     header h1 {
         font-family: "Libre Caslon Display", serif;
         font-weight: 100;
@@ -91,20 +199,21 @@ header {
     header p {
         font-family: "Outfit", sans-serif;
         color: #11588C;
-        font-size: 26px;
+        font-size: 25px;
         padding-left: 40%;
         padding-bottom: 10px;
         margin: 0px;
+        margin-left: -15%;
     }
 
     header p::before {
         content: "";
         display: block;
-        width: 86%;
+        width: 33%;
         background: #11588C;
-        left: -88%;
+        left: 0;
         top: 35%;
-        position: relative;
+        position: absolute;
         padding-top: 4px;
     }
 
@@ -136,16 +245,15 @@ header {
         height: 50%;
     }
 
-    /******* ABOUT ME ********/
-    aside img {
-        width: 200px;
-        height: 200px;
-        padding: 25px 15px 79px;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
-        background: whitesmoke;
-        display: block;
-        margin-left: auto;
-        border-radius: 14px;
-        margin-right: auto;
+    /******* PROJECT SHOWCASE ********/
+    #projectShowcase article.projectBox img {
+        overflow: hidden;
     }
+
+    /******* ABOUT ME ********/
+    aside p.aboutText {
+        padding: 10%;
+        line-height: 30px;
+    }
+
 }
