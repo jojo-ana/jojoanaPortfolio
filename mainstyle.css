@@ -86,9 +86,15 @@ nav ul {
     height: 44%;
     flex-direction: column;
     right: 0%;
+    z-index: 10;
 }
+
 nav ul li {
     padding: 25px 5px 25px 5px;
+}
+nav ul li a {
+    height: 54px;
+    display: block;
 }
 
 /******* HEADER ********/
@@ -130,6 +136,7 @@ header img {
     width: 32%;
     opacity: 0.5;
     transform: translate(510px, 10px);
+    max-width: 430px;
 }
 
 /******* PROJECT SHOWCASE ********/
@@ -155,6 +162,20 @@ aside img {
     margin-left: auto;
     border-radius: 14px;
     margin-right: auto;
+}
+
+/******* FOOTER ********/
+footer {
+    background-color: #021526;
+    padding: 16px;
+}
+
+footer h3 {
+    color: #E8EFF4;
+}
+
+footer p {
+    color: #458bdd;
 }
 
 /* Mobile styles */
@@ -250,10 +271,19 @@ aside img {
         overflow: hidden;
     }
 
+    #projectShowcase p.mobileStyling {
+        display: block;
+    }
+
     /******* ABOUT ME ********/
     aside p.aboutText {
         padding: 10%;
         line-height: 30px;
+    }
+
+    /******* FOOTER ********/
+    footer {
+        opacity: 0%;
     }
 
 }
