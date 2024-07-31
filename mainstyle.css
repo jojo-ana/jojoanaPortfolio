@@ -45,7 +45,7 @@ div.headerDesign {
     justify-content: center;
     display: flex;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 div.headerDesign h2 {
@@ -146,8 +146,7 @@ header img {
 
 /******* ABOUT ME ********/
 aside p.aboutText {
-    padding: 5%;
-    padding-right: 10%;
+    padding: 4%;
     font-size: 18px;
     line-height: 38px;
 }
@@ -168,7 +167,7 @@ aside div.aboutBody{
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
-    padding: 0px 14%;
+    padding: 0px 11% 3%;
 }
 
 /******* FOOTER ********/
