@@ -485,7 +485,7 @@ div.projectBreakdown header div {
 
     /******* FOOTER ********/
     footer {
-        opacity: 0%;
+        padding-bottom: 100px;
     }
 
 
