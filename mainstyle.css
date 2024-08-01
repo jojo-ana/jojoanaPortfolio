@@ -101,28 +101,28 @@ nav ul li a {
 }
 
 /******* HEADER ********/
-header {
+div#homeContent header {
     background-image: url("images/headerBackground.png");
     height: 425px;
     margin-top: 3%;
 }
 
-header h1 {
+div#homeContent header h1 {
     padding-top: 295px;
     padding-left: 7%;
 }
 
-header p {
+div#homeContent  header p {
     font-size: 28px;
     padding-left: 46%;
 }
 
-header h1, header p {
+div#homeContent  header h1, header p {
     position: relative;
     z-index: 1;
 }
 
-header p::before {
+div#homeContent header p::before {
     content: "";
     display: block;
     width: 44%;
@@ -304,6 +304,42 @@ button:hover {
     background-color: #0056b3;
 }
 
+/********* SUBPAGES: portfolio **********/
+div#projectNavigation header, div.projectBreakdown header {
+    background-image: url("images/headerBackground.png");
+    height: 100px;
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    overflow-x: hidden;
+}
+
+div#projectNavigation header h1, div.projectBreakdown header h1 {
+    border-style: solid;
+    border-color: #6EACDA;
+    padding: 1% 5%;
+    margin-left: 6%;
+    z-index: 1;
+}
+
+div#projectNavigation header p, div.projectBreakdown header p {
+    padding-top: 1.5%;
+    position: absolute;
+    z-index: 0;
+    color: transparent;
+    text-shadow: 0 0 3.5px #6eacdaa1;
+    letter-spacing: 38px;
+    font-size: 63px;
+    font-family: "Licorice", cursive;
+    margin-left: 3%;
+}
+
+div.projectBreakdown header div {
+    z-index: 10;
+}
+
 /* Mobile styles */
 @media (max-width: 1000px){
     #projectShowcase section article.projectBox {
@@ -334,11 +370,12 @@ button:hover {
     }
 
     /******* HEADER ********/
-    header {
+    div#homeContent header {
         height: auto;
         overflow-x: hidden;
     }
-    header img {
+
+    div#homeContent header img {
         display: block;
         position: relative;
         width: 60%;
@@ -346,7 +383,7 @@ button:hover {
         transform: translateX(190px);
     }
 
-    header h1 {
+    div#homeContent header h1 {
         font-family: "Libre Caslon Display", serif;
         font-weight: 100;
         font-size: 55px;
@@ -357,7 +394,7 @@ button:hover {
         transform: translate(0%, -100%);
     }
 
-    header p {
+    div#homeContent header p {
         font-family: "Outfit", sans-serif;
         color: #11588C;
         font-size: 25px;
@@ -367,7 +404,7 @@ button:hover {
         margin-left: -15%;
     }
 
-    header p::before {
+    div#homeContent header p::before {
         content: "";
         display: block;
         width: 33%;
@@ -449,6 +486,20 @@ button:hover {
     /******* FOOTER ********/
     footer {
         opacity: 0%;
+    }
+
+
+    /******* SUBPAGE: portfolio; Header ********/
+    div#projectNavigation header h1, div.projectBreakdown header h1 {
+        font-size: 55px;
+        line-height: 146%;
+
+    }
+
+    div#projectNavigation header p, div.projectBreakdown header p {
+        font-size: 41px;
+        letter-spacing: 30px;
+        padding-top: 4.5%;
     }
 
 }
