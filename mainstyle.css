@@ -304,7 +304,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-/********* SUBPAGES: portfolio **********/
+/********* SUBPAGES: portfolio; header **********/
 div#projectNavigation header, div.projectBreakdown header {
     background-image: url("images/headerBackground.png");
     height: 100px;
@@ -339,6 +339,172 @@ div#projectNavigation header p, div.projectBreakdown header p {
 div.projectBreakdown header div {
     z-index: 10;
 }
+
+/********* SUBPAGES: portfolio; showcase **********/
+div#projectNavigation main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px 24px;
+    justify-content: center;
+    padding-bottom: 100px;
+    overflow-x: hidden;
+    align-items: start;
+    justify-items: center;
+    padding-right: 7%;
+}
+
+div#projectNavigation main section {
+    min-height: 490px;
+    min-width: 100px;
+    max-width: 270px;
+    background-color: #f9f9ea;
+    border-radius: 15px;
+    border-top: 2px solid #021526;
+    border-left: 2px solid #021526;
+    border-bottom: none;
+    border-right: none;
+    padding: 12px 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div#projectNavigation main section img {
+    height: 200px;
+    aspect-ratio: 1.5 / 1;
+    border-radius: 15%;
+}
+
+div#projectNavigation main section h2 {
+    font-size: 45px;
+}
+
+div#projectNavigation main section p.tags {
+    background: #0056b3;
+    color: #E2E2B6;
+    text-align: end;
+    padding-right: 10px;
+    margin-bottom: 11px;
+}
+
+div#projectNavigation main section a:visited, div#projectNavigation main section a {
+    color: #03346E;
+    text-decoration: none;
+    font-size: 20px;
+    width: 38%;
+    padding:1%;
+}
+
+div#projectNavigation main section a:hover {
+    background:#6eabda46;
+}
+
+/********* SUBPAGES: projectBreakdown **********/
+div.projectBreakdown {
+    overflow-x: hidden;
+}
+
+div.projectBreakdown header ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 56%;
+    z-index: 10;
+}
+
+div.projectBreakdown header ul li {
+    padding: 10px 19px;
+    background: #DCE6ED;
+    border-radius: 20%;
+    box-shadow: 0px 5px 16px -6px rgba(0, 0, 0, 0.75);
+    min-width: 46px;
+    height: 25px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+div.projectBreakdown header ul li.emptyButton {
+    opacity: 0%;
+}
+
+div.projectBreakdown header ul li a, div.projectBreakdown header ul li a:visited {
+    text-decoration: none;
+    font-family: 'Outfit';
+    font-size: 22px;
+    color:#021526
+}
+
+div.projectBreakdown main div h2 {
+    padding-left: 8%;
+    position: relative;
+    color: #03346E;
+}
+
+div.projectBreakdown main div h2::before {
+    content: "";
+    display: block;
+    width: 7%;
+    background: #11588C;
+    left: 0;
+    top: 50%;
+    position: absolute;
+    padding-top: 4px;
+}
+
+div.projectBreakdown main div h3 {
+    padding-left: 16%;
+    position: relative;
+    font-size: 35px;
+    color: #03346E;
+} 
+
+div.projectBreakdown main div h3::before {
+    content: "";
+    display: block;
+    width: 15%;
+    background: #6EACDA;
+    left: 0;
+    top: 41%;
+    position: absolute;
+    padding-top: 3px;
+}
+
+div.projectBreakdown main div img {
+    max-width: 500px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+
+div.projectBreakdown main div.projectImgContatiner {
+    display: flex;
+    padding-bottom: 5%;
+    flex-direction: row;
+}
+
+div.projectBreakdown main div p {
+    padding: 0px 10% 10px 50px;
+}
+
+div.projectBreakdown main div.projectFinal a {
+    color: #021526;
+    text-decoration: none;
+    font-size: 18px;
+    width: 38%;
+    padding:1%;
+    font-family:'Outfit';
+    padding: 0px 10% 10px 50px;
+}
+
+div.projectBreakdown main div.projectFinal a:hover {
+    background:#6eabda46;
+}
+
 
 /* Mobile styles */
 @media (max-width: 1000px){
@@ -502,4 +668,40 @@ div.projectBreakdown header div {
         padding-top: 4.5%;
     }
 
+    /******* SUBPAGE: portfolio; showcase ********/
+    div#projectNavigation main {
+        display: block;
+    }
+
+    div#projectNavigation main section{
+        align-items: flex-start;
+        margin-bottom: 5%;
+    }
+
+    /******* SUBPAGE: projectBreakdown ********/
+    div.projectBreakdown header ul { 
+        flex-direction: column;
+        align-items: center;
+        gap: 5%;
+        z-index: 10;
+        justify-content: flex-start;
+    }
+
+    div.projectBreakdown header ul li {
+        padding: 7px 19px;
+    }
+
+    div.projectBreakdown main div.projectImgContatiner {
+        display: flex;
+        padding-bottom: 5%;
+        flex-direction: column;
+    }
+
+    div.projectBreakdown main div img {
+        padding-bottom: 10%;
+    }
+
+    div.projectBreakdown main div p {
+        padding: 0px 10%;
+    }    
 }
