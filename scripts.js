@@ -1,11 +1,11 @@
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-  event.preventDefault();
+  event.preventDefault(); // Prevent default form submission
 
   const formStatus = document.getElementById('form-status');
-  formStatus.textContent = 'Sending...';
+  formStatus.textContent = 'Sending...'; // Update status message
 
-  const formData = new FormData(event.target);
-
+  const formData = new FormData(event.target); // Create FormData object
+  
   fetch(event.target.action, {
     method: 'POST',
     body: formData
@@ -14,7 +14,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   .then(data => {
     if (data.ok) {
       formStatus.textContent = 'Message sent successfully!';
-      event.target.reset();
+      event.target.reset(); // Optionally reset the form
     } else {
       formStatus.textContent = 'Failed to send message. Please try again.';
     }
